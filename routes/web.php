@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LandingPages\LandingPageController;
+use App\Http\Controllers\UserAuthentication\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [LandingPageController::class, 'index'])->name('landing.page');
+Route::get('/login', [UserController::class, 'login'])->name('user.login');

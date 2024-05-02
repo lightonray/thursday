@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="header-action">
                                         <ul class="list-wrap">
-                                            <li class="header-login"><a href="#">Login<i class="fas fa-user"></i></a></li>
+                                            <li class="header-login"><a href="{{ route('user.login') }}">Login<i class="fas fa-user"></i></a></li>
                                             <li class="offcanvas-menu"><a href="#" class="menu-tigger"><i class="fas fa-bars"></i></a></li>
                                         </ul>
                                     </div>
