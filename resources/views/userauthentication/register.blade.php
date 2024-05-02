@@ -59,44 +59,33 @@
 												<a href="index.html"><img class="logo-main" src="images/logo.svg" alt=""></a>
 												<a href="index.html"><img class="logo-inverse" src="images/dark_logo.svg" alt=""></a>
 											</div>
-											<h2>Sign in</h2>
+											<h2>Sign up</h2>
 										</div>
 										<div class="social-logins">
 											<div class="row g-2">
-												<div class="col-12">
-													<button class="sign-social-btn sign-g-btn"><i class="fab fa-google"></i>Continue with Google</button>
-												</div>
-												<div class="col-3">
-													<button class="sign-social-btn sign-f-btn"><i class="fab fa-facebook"></i></button>
-												</div>
-												<div class="col-3">
-													<button class="sign-social-btn sign-t-btn"><i class="fab fa-twitter"></i></button>
-												</div>
-												<div class="col-3">
-													<button class="sign-social-btn sign-a-btn"><i class="fab fa-linkedin-in"></i></button>
-												</div>
-												<div class="col-3">
-													<button class="sign-social-btn sign-l-btn"><i class="fab fa-apple"></i></button>
-												</div>
+												
 											</div>
-										</div>
-										<div class="divider-line d-flex align-center">
-											<span class="v-divider line-color"></span>
-											<div class="or"><span>Or</span></div>
-											<span class="v-divider line-color"></span>
 										</div>
 										<div class="login-register-form">
 											<form>
+                                                <div class="form-group position-relative mb-2 mt-4">									
+													<input class="input-control" type="text" placeholder="Enter your First name">
+												</div>
+                                                <div class="form-group position-relative mb-2">									
+													<input class="input-control" type="text" placeholder="Enter your Last name">
+												</div>
 												<div class="form-group position-relative mb-2">									
-													<input class="input-control" type="email" placeholder="Ente your email ">
+													<input class="input-control" type="email" placeholder="Enter your Email ">
 												</div>		
+                                                <div class="form-group position-relative mb-2">									
+													<input class="input-control" type="password" placeholder="Enter your Password">
+												</div>	
                                                 <div class="form-group position-relative">									
-													<input class="input-control" type="password" placeholder="Enter your password">
-												</div>										
-												<button class="main-btn btn-hover w-100 h-40 mt-3" type="submit">Login</button>
+													<input class="input-control" type="password" placeholder="Repeat your Password">
+												</div>									
+												<button class="main-btn btn-hover w-100 h-40 mt-3" type="submit">Register</button>
 											</form>
-                                            <a href="{{ route('user.register') }}" class="forgot-link">Don't have an account? Register here</a>
-											<a href="forgot_password.html" class="forgot-link">Forgot Password?</a>
+                                            <a href="{{ route('user.login') }}" class="forgot-link">Back to sign in <i class="uil uil-sign-in-alt"></i></a>
 										</div>
 										<div class="sign-bottom-links">
 											<ul class="sign_links">
