@@ -7,17 +7,17 @@
         <meta name="description" content="Xeco - ICO & Crypto Landing Page Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
         <!-- Place favicon.ico in the root directory -->
 
 		<!-- CSS here -->
-        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../assets/css/animate.min.css">
-        <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="../assets/css/slick.css">
-        <link rel="stylesheet" href="../assets/css/default.css">
-        <link rel="stylesheet" href="../assets/css/style.css">
-        <link rel="stylesheet" href="../assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/slick.css">
+        <link rel="stylesheet" href="assets/css/default.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
     </head>
     <body>
 
@@ -47,19 +47,19 @@
                         <div class="col-12">
                             <div class="menu-wrap">
                                 <nav class="menu-nav">
-                                    <div class="logo">
-                                        <a href="index.html"><img src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo"></a>
+                                    <div  class="logo">
+                                        <a href="index.html"><img style="margin-left: 20px; width: 120px" src="assets/img/logo/thursdaylogo.png" alt="Logo"></a>
                                     </div>
                                     <div class="navbar-wrap main-menu d-none d-lg-flex">
                                         <ul class="navigation">
                                             <li class="active"><a href="#header" class="section-link">Home</a></li>
                                             <li><a href="#feature" class="section-link">Feature</a></li>
-                                            <li><a href="#chart" class="section-link">ICO Chart</a></li>
-                                            <li><a href="#roadMap" class="section-link">RoadMap</a></li>
-                                            <li class="menu-item-has-children"><a href="#">blog</a>
+                                            <li><a href="#chart" class="section-link">Plans</a></li>
+                                            <li><a href="#roadMap" class="section-link">Forum</a></li>
+                                            <li class="menu-item-has-children"><a href="#">Why Thursday?</a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="blog.html">Our Blog</a></li>
-                                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                                    <li><a href="blog.html">Technology</a></li>
+                                                    <li><a href="blog-details.html">Security</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="contact.html">Contact</a></li>
@@ -80,7 +80,7 @@
                                 <nav class="menu-box">
                                     <div class="close-btn"><i class="fas fa-times"></i></div>
                                     <div class="nav-logo">
-                                        <a href="index.html"><img src="../assets/img/logo/logo.png" alt="Logo"></a>
+                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
                                     </div>
                                     <div class="menu-outer">
                                         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
@@ -110,7 +110,7 @@
                     <button><i class="far fa-window-close"></i></button>
                 </div>
                 <div class="logo-side mb-30">
-                    <a href="index.html"><img src="../assets/img/logo/logo.png" alt="Logo"></a>
+                    <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
                 </div>
                 <div class="side-info mb-30">
                     <div class="contact-list mb-30">
@@ -141,303 +141,221 @@
         </header>
         <!-- header-area-end -->
 
+        <!-- main-area -->
+        <main>
+
+            <!-- banner-area -->
+            <section class="banner-area banner-bg" data-background="assets/img/banner/banner_bg.png">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="banner-content text-center">
+                                <h2 class="title">Welcome to Thursday <br> <span>Revolutionize Your Trading</span></h2>
+                                <p>Thursday offers a unified platform for trading across all major cryptocurrency exchanges, equipped with advanced automation trading and analytics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-scroll-down">
+                    <a href="#contribution" class="section-link">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+                <div class="banner-shape-wrap">
+                    <img src="assets/img/banner/banner_shape01.png" alt="" class="leftToRight">
+                    <img src="assets/img/banner/banner_shape02.png" alt="" class="alltuchtopdown">
+                </div>
+            </section>
+            <!-- banner-area-end -->
         
-       <!-- main-area -->
-<main>
-    <!-- banner-area -->
-    <section class="banner-area banner-bg" data-background="../assets/img/banner/banner_bg.png">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="banner-content text-center">
-                        <h2 class="title">Discover the Next Big Opportunity: <br> <span>Thursday’s Trading Platform is Live</span></h2>
-                        <p>Thursday connects you to global crypto exchanges through a smart trading terminal, enabling automated trading across multiple platforms with enhanced security and efficiency.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="banner-scroll-down">
-            <a href="#contribution" class="section-link">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-        </div>
-        <div class="banner-shape-wrap">
-            <img src="../assets/img/banner/banner_shape01.png" alt="" class="leftToRight">
-            <img src="../assets/img/banner/banner_shape02.png" alt="" class="alltuchtopdown">
-        </div>
-    </section>
-    <!-- banner-area-end -->
-
-    <!-- contribution-area -->
-    <section id="contribution" class="contribution-area pt-130 pb-130">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="progress-wrap">
-                        <ul class="list-wrap">
-                            <li>Automated Bots</li>
-                            <li>Multiple Exchanges</li>
-                            <li>Real-time Analytics</li>
-                        </ul>
-                        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar" style="width: 83%"></div>
-                        </div>
-                        <h6 class="progress-title">Targeting New Heights in Crypto Trading</h6>
-                    </div>
-                    <div class="contribution-btn">
-                        <a href="contact.html" class="btn">Join Us</a>
-                        <a href="contact.html" class="btn btn-two">Read White Paper</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="contribution-shape-wrap">
-            <img src="../assets/img/images/contribution_shape01.png" alt="" class="alltuchtopdown">
-            <img src="../assets/img/images/contribution_shape02.png" alt="" class="leftToRight">
-        </div>
-    </section>
-    <!-- contribution-area-end -->
-
-    <!-- brand-area -->
-    <div class="brand-area">
-        <div class="container-fluid p-0">
-            <div class="row g-0">
-                <div class="col-lg-12">
-                    <div class="brand-title text-center">
-                        <h6 class="title">Our Top Partners</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="brand-item-wrap">
-                <div class="row g-0 brand-active">
-                    <div class="col-12">
-                        <div class="brand-item">
-                            <img src="../assets/img/brand/CMU.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div  class="brand-item">
-                            <img style="margin-top: 15px" src="../assets/img/brand/VUM.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="brand-item">
-                            <img src="../assets/img/brand/CMU.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div  class="brand-item">
-                            <img style="margin-top: 15px" src="../assets/img/brand/VUM.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="brand-item">
-                            <img src="../assets/img/brand/CMU.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div  class="brand-item">
-                            <img style="margin-top: 15px" src="../assets/img/brand/VUM.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="brand-item">
-                            <img src="../assets/img/brand/CMU.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div  class="brand-item">
-                            <img style="margin-top: 15px" src="../assets/img/brand/VUM.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- brand-area-end -->
-
-    <!-- features-area -->
-    <section id="feature" class="features-area pt-140 pb-110">
-        <div the="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="section-title text-center mb-70">
-                        <h2 class="title">Revolutionary Trading with Thursday</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="features-item">
-                        <div class="features-content">
-                            <h2 class="title"><a href="#!">All-in-One Smart Terminal</a></h2>
-                            <p>Access multiple exchanges and automate your trades through our advanced terminal interface.</p>
-                        </div>
-                        <div class="features-img">
-                            <img src="../assets/img/images/features_img01.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="features-item">
-                        <div the="features-content">
-                            <h2 the="title"><a href="#!">Secure & Reliable Transactions</a></h2>
-                            <p>Trade with confidence, knowing that your data and assets are protected by top-tier security protocols.</p>
-                        </div>
-                        <div class="features-img">
-                            <img src="../assets/img/images/features_img02.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="features-item">
-                        <div the="features-content">
-                            <h2 the="title"><a href="#!">Automated Trading Bots</a></h2>
-                            <p>Optimize your trading strategy with customizable bots that execute trades automatically based on set conditions.</p>
-                        </div>
-                        <div class="features-img">
-                            <img src="../assets/img/images/features_img03.png" alt="">
-                        </div                    ></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="features-item">
-                            <div class="features-content">
-                                <h2 class="title"><a href="#!">Advanced Market Analytics</a></h2>
-                                <p>Leverage cutting-edge analytics tools to make informed decisions and stay ahead in the market.</p>
+            <!-- contribution-area -->
+            <section id="contribution" class="contribution-area pt-130 pb-130">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="contribution-title">
+                                <h2 class="title">Expanding Horizons</h2>
                             </div>
-                            <div class="features-img">
-                                <img src="../assets/img/images/features_img04.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- features-area-end -->
-    
-        <!-- chart-area -->
-        <div id="chart" class="chart-area pt-140">
-            <div class="container">
-                <div class="chart-inner-wrap">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="chart-wrap">
-                                <div class="chart">
-                                    <canvas id="doughnutChart"></canvas>
+                            <div class="progress-wrap">
+                                <ul class="list-wrap">
+                                    <li>Seamless Integration</li>
+                                    <li>Robust Automation</li>
+                                    <li>Comprehensive Analytics</li>
+                                </ul>
+                                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar" style="width: 83%"></div>
                                 </div>
-                                <div class="chart-tab">
-                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="funding-tab" data-bs-toggle="tab" data-bs-target="#funding-tab-pane" type="button" role="tab" aria-controls="funding-tab-pane" aria-selected="true">Funding Allocation</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="token-tab" data-bs-toggle="tab" data-bs-target="#token-tab-pane" type="button" role="tab" aria-controls="token-tab-pane" aria-selected="false">Token Distribution</button>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade show active" id="funding-tab-pane" role="tabpanel"
-                                            aria-labelledby="funding-tab" tabindex="0">
-                                            <div class="chart-list">
-                                                <ul class="list-wrap">
-                                                    <li>Technology Development: 40%</li>
-                                                    <li>Marketing & Outreach: 25%</li>
-                                                    <li>Operations: 20%</li>
-                                                    <li>Legal & Compliance: 15%</li>
-                                                </ul>
-                                            </div>
+                                <h6 class="progress-title">Ahead of Schedule in Our Development Roadmap</h6>
+                            </div>
+                            <div class="contribution-btn">
+                                <a href="contact.html" class="btn">Get Started</a>
+                                <a href="contact.html" class="btn btn-two">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contribution-shape-wrap">
+                    <img src="assets/img/images/contribution_shape01.png" alt="" class="alltuchtopdown">
+                    <img src="assets/img/images/contribution_shape02.png" alt="" class="leftToRight">
+                </div>
+            </section>
+            <!-- contribution-area-end -->
+        
+            <!-- brand-area -->
+            <div class="brand-area">
+                <div class="container-fluid p-0">
+                    <div class="row g-0">
+                        <div class="col-lg-12">
+                            <div class="brand-title text-center">
+                                <h6 class="title">Our Trusted Partners</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brand-item-wrap">
+                        <div class="row g-0 brand-active">
+                            <div class="col-12">
+                                <div class="brand-item">
+                                    <a target="blank" href="https://www.cardiffmet.ac.uk/Pages/default.aspx">
+                                        <img src="assets/img/brand/CMU.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="brand-item">
+                                    <a target="blank" href="https://vum.bg/">
+                                        <img src="assets/img/brand/VUM.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- brand-area-end -->
+        
+            <!-- features-area -->
+            <section id="feature" class="features-area pt-140 pb-110">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="section-title text-center mb-70">
+                                <h2 class="title">Features Tailored for Every Trader</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="features-item">
+                                <div class="features-content">
+                                    <h2 class="title">Smart Terminal Interface</h2>
+                                    <p>Control and execute trades across all exchanges from one powerful interface.</p>
+                                </div>
+                                <div class="features-img">
+                                    <img src="assets/img/images/features_img01.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="features-item">
+                                <div class="features-content">
+                                    <h2 class="title">Advanced Trading Bots</h2>
+                                    <p>Automate your trading strategies with our highly customizable and intelligent bots.</p>
+                                </div>
+                                <div class="features-img">
+                                    <img src="assets/img/images/features_img02.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="features-item">
+                                <div class="features-content">
+                                    <h2 the="title">Enhanced Security Measures</h2>
+                                    <p>Trade with confidence knowing your assets are safeguarded with state-of-the-art security protocols.</p>
+                                </div>
+                                <div class="features-img">
+                                    <img src="assets/img/images/features_img03.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="features-item">
+                                <div class="features-content">
+                                    <h2 class="title">Real-Time Market Insights</h2>
+                                    <p>Gain an edge in the market with real-time analytics and actionable insights.</p>
+                                </div>
+                                <div class="features-img">
+                                    <img src="assets/img/images/features_img04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- features-area-end -->
+        
+            <!-- features-area -->
+            <section class="features-area-two features-bg"  data-background="assets/img/bg/features_bg.png">
+                <div class="container">
+                    <div class="features-inner-wrap">
+                        <div class="features-item-wrap">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="features-item-two">
+                                        <div class="features-img-two">
+                                            <img src="assets/img/images/features_two_img01.png" alt="">
                                         </div>
-                                        <div class="tab-pane fade" id="token-tab-pane" role="tabpanel" aria-labelledby="token-tab"
-                                            tabindex="0">
-                                            <div class="chart-list">
-                                                <ul class="list-wrap">
-                                                    <li>Public Sale: 50%</li>
-                                                    <li>Private Investors: 20%</li>
-                                                    <li>Founders & Team: 15%</li>
-                                                    <li>Reserve: 15%</li>
-                                                </ul>
-                                            </div>
+                                        <div class="features-content-two">
+                                            <h2 class="title">Seamless Trading Experience</h2>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="features-item-two">
+                                        <div the="features-img-two">
+                                            <img src="assets/img/images/features_two_img02.png" alt="">
+                                        </div>
+                                        <div class="features-content-two">
+                                            <h2 the="title">Comprehensive Asset Management</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="features-item-two">
+                                        <div the="features-img-two">
+                                            <img src="assets/img/images/features_two_img03.png" alt="">
+                                        </div>
+                                        <div class="features-content-two">
+                                            <h2 the="title">Cutting-Edge Technological Integration</h2>
+                                        </div>
+                                    </div
+                                ></div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="right-side-content">
-                                <img src="../assets/img/images/chart_img.png" alt="">
-                                <p>Utilize our comprehensive platform for strategic allocation and real-time tracking of your crypto assets.</p>
-                                <ul class="list-wrap">
-                                    <li><span>1</span>Technology Integration</li>
-                                    <li><span>2</span>Comprehensive Support</li>
-                                    <li><span>3</span>Secure Transactions</li>
-                                </ul>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-title section-title-two text-center">
+                                    <h2 class="title">Join Thursday and Step into the Future of Trading</h2>
+                                </div>
                             </div>
                         </div>
+                        <div class="features-line-shape"></div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- chart-area-end -->
-    
-        <!-- roadMap-area -->
-        <section id="roadMap" class="roadmap-area pt-140">
-            <div class="container-fluid p-0">
-                <div class="row g-0">
-                    <div class="col-lg-12">
-                        <div class="section-title text-center mb-70">
-                            <h2 class="title">Our Roadmap</h2>
-                        </div>
-                    </div>
+                <div class="features-shape-wrap">
+                    <img src="assets/img/images/features_shape01.png" alt="" class="alltuchtopdown">
+                    <img src="assets/img/images/features_shape02.png" alt="" class="leftToRight">
                 </div>
-                <div class="row roadMap-active">
-                    <div class="col-lg-4">
-                        <div class="roadmap-item">
-                            <span class="roadmap-title">Q1 2024</span>
-                            <div class="roadmap-content">
-                                <h4 class="title"><span class="dot"></span>Platform Enhancement</h4>
-                                <p>Implement advanced trading algorithms and expand exchange integration.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="roadmap-item">
-                            <span class="roadmap-title">Q2 2024</span>
-                            <div class="roadmap-content">
-                                <h4 class="title"><span class="dot"></span>User Experience Upgrade</h4>
-                                <p>Redesign user interface for enhanced usability and engagement.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="roadmap-item">
-                            <span class="roadmap-title">Q3 2024</span>
-                            <div class="roadmap-content">
-                                <h4 class="title"><span class="dot"></span>Global Expansion</h4>
-                                <p>Expand market presence to new regions, adding localized support and features.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="roadmap-item">
-                            <span class="roadmap-title">Q4 2024</span>
-                            <div class="roadmap-content">
-                                <h4 class="title"><span class="dot"></span>Regulatory Compliance</h4>
-                                <p>Enhance compliance measures to meet global regulatory standards.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- roadMap-area-end -->
-    </main>
-    <!-- main-area-end -->
-    
+            </section>
+            <!-- features-area-end -->
+        </main>
+        
+        <!-- main-area-end -->
 
         <!-- footer-area -->
         <footer>
-            <div class="footer-area footer-bg" data-background="../assets/img/bg/footer_bg.png">
+            <div class="footer-area footer-bg" data-background="assets/img/bg/footer_bg.png">
                 <div class="container">
                     <div class="footer-top">
                         <div class="row">
@@ -508,8 +426,8 @@
                     </div>
                 </div>
                 <div class="footer-shape-wrap">
-                    <img src="../assets/img/images/footer_shape01.png" alt="" class="alltuchtopdown">
-                    <img src="../assets/img/images/footer_shape02.png" alt="" class="leftToRight">
+                    <img src="assets/img/images/footer_shape01.png" alt="" class="alltuchtopdown">
+                    <img src="assets/img/images/footer_shape02.png" alt="" class="leftToRight">
                 </div>
             </div>
         </footer>
@@ -517,16 +435,16 @@
 
 
 		<!-- JS here -->
-        <script src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
-        <script src="../assets/js/bootstrap.min.js"></script>
-        <script src="../assets/js/jquery.countdown.min.js"></script>
-        <script src="../assets/js/jquery.appear.js"></script>
-        <script src="../assets/js/slick.min.js"></script>
-        <script src="../assets/js/ajax-form.js"></script>
-        <script src="../assets/js/jquery.easing.js"></script>
-        <script src="../assets/js/chart.min.js"></script>
-        <script src="../assets/js/custom-chart.js"></script>
-        <script src="../assets/js/wow.min.js"></script>
-        <script src="../assets/js/main.js"></script>
+        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.countdown.min.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/ajax-form.js"></script>
+        <script src="assets/js/jquery.easing.js"></script>
+        <script src="assets/js/chart.min.js"></script>
+        <script src="assets/js/custom-chart.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
