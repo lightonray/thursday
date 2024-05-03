@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
 		<meta name="description" content="Gambolthemes">
 		<meta name="author" content="Gambolthemes">		
-		<title>UkiyoX - Create, sell or collect digital items secured with #blockchain</title>
+		<title>Thursday - Dashboard</title>
 		
 		<!-- Favicon Icon -->
 		<link rel="icon" type="image/png" href="images/fav.png">
@@ -989,9 +989,9 @@
 						</a>
 					</li>					
 					<li class="menu--item">
-						<a href="explore.html" class="menu--link" title="Explore">
+						<a href="{{ route('user.exchange') }}" class="menu--link" title="Explore">
 							<i class='uil uil-compass menu--icon'></i>
-							<span class="menu--label">Explore</span>
+							<span class="menu--label">Smart Trade Exchange</span>
 						</a>
 					</li>
 					<li class="menu--item">
