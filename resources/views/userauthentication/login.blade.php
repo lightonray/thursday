@@ -86,13 +86,25 @@
 											<span class="v-divider line-color"></span>
 										</div>
 										<div class="login-register-form">
-											<form>
-												<div class="form-group position-relative mb-2">									
-													<input class="input-control" type="email" placeholder="Ente your email ">
-												</div>		
-                                                <div class="form-group position-relative">									
-													<input class="input-control" type="password" placeholder="Enter your password">
-												</div>										
+											<form method="POST" action="{{ route('user.authenticate') }}">
+												@csrf
+												<div class="form-group position-relative mb-2">
+													<input name="email" class="input-control" type="email" placeholder="Enter your email" required>
+													@error('email')
+														<div class="alert alert-danger mt-2">Required</div>
+													@enderror
+												</div>
+												<div class="form-group position-relative">
+													<input name="password" class="input-control" type="password" placeholder="Enter your password" required>
+													@error('password')
+														<div class="alert alert-danger mt-2">Required</div>
+													@enderror
+												</div>
+												@if($errors->has('login_error'))
+													<div class="alert alert-danger mt-2">
+														{{ $errors->first('login_error') }}
+													</div>
+												@endif
 												<button class="main-btn btn-hover w-100 h-40 mt-3" type="submit">Login</button>
 											</form>
                                             <a href="{{ route('user.register') }}" class="forgot-link">Don't have an account? Register here</a>

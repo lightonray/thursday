@@ -20,3 +20,4 @@ Route::get('/forgotpassword', [UserController::class, 'forgotpassword'])->name('
 
 
 Route::post('/store', [UserController::class, 'store'])->name('user.store');
+Route::post('/authenticate', [UserController::class, 'authenticate'])->name('user.authenticate');

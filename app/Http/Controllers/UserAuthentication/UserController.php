@@ -5,7 +5,9 @@ namespace App\Http\Controllers\UserAuthentication;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Providers\RouteServiceProvider;
 
 class UserController extends Controller
 {
@@ -17,6 +19,32 @@ class UserController extends Controller
         return view('userauthentication.login');
     }
     
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ], [
+            'email.required' => 'Email is required.',
+            'password.required' => 'Password is required.',
+            'email.email' => 'Invalid email format.',
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            // Redirect based on user role
+            // if (Auth::user()->hasRole('admin') || Auth::user()->hasRole('moderator')) {
+            //     return redirect()->route(RouteServiceProvider::HOME);
+            // } else {
+                return redirect()->to(RouteServiceProvider::USERHOME);
+            // }
+        }
+
+        // If authentication is not successful, just display a generic error message.
+        return back()->withErrors(['login_error' => 'Invalid credentials.']);
+    }
+
     public function register()
     {
         return view('userauthentication.register');
