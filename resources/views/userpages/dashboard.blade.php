@@ -962,7 +962,12 @@
 								</div>
 							</li>
 							<li class="dropdown-menu-footer">
-								<a class="dropdown-item text-center" href="sign_in.html">Logout</a>
+								<form action="{{ route('logout') }}" method="POST" style="display: none;" id="logout-form">
+									@csrf
+								</form>
+								<a class="dropdown-item text-center" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+									Logout
+								</a>
 							</li>
 						</ul>
 					</div>

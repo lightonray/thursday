@@ -88,6 +88,20 @@ class UserController extends Controller
         return redirect()->back()->with('success', 'Registered successfully!');
     }
 
+
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        
+        $request->session()->regenerateToken();
+
+        return redirect()->route('user.login');
+    }
+
+
     public function forgotpassword()
     {
         return view('userauthentication.forgotpassword');
