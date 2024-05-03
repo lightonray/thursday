@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\LandingPages\LandingPageController;
+use App\Http\Controllers\UserPages\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [LandingPageController::class, 'index'])->name('landing.page');
+Route::get('/dashboard', [UserController::class, 'dashboard'])->name('user.dashboard');
 
-include __DIR__.'\userauthentication.php';
-
-include __DIR__.'\userpages.php';

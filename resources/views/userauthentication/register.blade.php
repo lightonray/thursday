@@ -67,22 +67,43 @@
 											</div>
 										</div>
 										<div class="login-register-form">
-											<form>
-                                                <div class="form-group position-relative mb-2 mt-4">									
-													<input class="input-control" type="text" placeholder="Enter your First name">
+											<form method="POST" action="{{ route('user.store') }}">
+												@csrf
+												<div class="form-group position-relative mb-2 mt-4">
+													<input name="first_name" class="input-control" type="text" placeholder="Enter your First name" required>
+													@error('first_name')
+														<div class="alert alert-danger mt-2">{{ $message }}</div>
+													@enderror
 												</div>
-                                                <div class="form-group position-relative mb-2">									
-													<input class="input-control" type="text" placeholder="Enter your Last name">
+												<div class="form-group position-relative mb-2">
+													<input name="last_name" class="input-control" type="text" placeholder="Enter your Last name" required>
+													@error('last_name')
+														<div class="alert alert-danger mt-2">{{ $message }}</div>
+													@enderror
 												</div>
-												<div class="form-group position-relative mb-2">									
-													<input class="input-control" type="email" placeholder="Enter your Email ">
-												</div>		
-                                                <div class="form-group position-relative mb-2">									
-													<input class="input-control" type="password" placeholder="Enter your Password">
+												<div class="form-group position-relative mb-2">
+													<input name="email" class="input-control" type="email" placeholder="Enter your Email" required>
+													@error('email')
+														<div class="alert alert-danger mt-2">{{ $message }}</div>
+													@enderror
+												</div>
+												<div class="form-group position-relative mb-2">
+													<input name="password" class="input-control" type="password" placeholder="Enter your Password" required>
+													@error('password')
+														<div class="alert alert-danger mt-2">{{ $message }}</div>
+													@enderror
+												</div>
+												<div class="form-group position-relative">
+													<input name="password_confirmation" class="input-control" type="password" placeholder="Repeat your Password" required>
+													@error('password_confirmation')
+														<div class="alert alert-danger">{{ $message }}</div>
+													@enderror
 												</div>	
-                                                <div class="form-group position-relative">									
-													<input class="input-control" type="password" placeholder="Repeat your Password">
-												</div>									
+												@if(session('success'))
+													<div class="alert alert-success mt-2">
+														{{ session('success') }}
+													</div>
+												@endif							
 												<button class="main-btn btn-hover w-100 h-40 mt-3" type="submit">Register</button>
 											</form>
                                             <a href="{{ route('user.login') }}" class="forgot-link">Back to sign in <i class="uil uil-sign-in-alt"></i></a>
