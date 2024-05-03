@@ -419,7 +419,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="copyright-text">
-                                    <p>Copyright © 2023 XECO. All rights reserved.</p>
+                                    <p>Copyright © 2024 Thursday. All rights reserved.</p>
                                 </div>
                             </div>
                         </div>

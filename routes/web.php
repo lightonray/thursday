@@ -18,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [LandingPageController::class, 'index'])->name('landing.page');
 Route::get('/login', [UserController::class, 'login'])->name('user.login');
 Route::get('/register', [UserController::class, 'register'])->name('user.register');
+Route::get('/forgotpassword', [UserController::class, 'forgotpassword'])->name('user.forgotpassword');

@@ -96,7 +96,7 @@
 												<button class="main-btn btn-hover w-100 h-40 mt-3" type="submit">Login</button>
 											</form>
                                             <a href="{{ route('user.register') }}" class="forgot-link">Don't have an account? Register here</a>
-											<a href="forgot_password.html" class="forgot-link">Forgot Password?</a>
+											<a href="{{ route('user.forgotpassword') }}" class="forgot-link">Forgot Password?</a>
 										</div>
 										<div class="sign-bottom-links">
 											<ul class="sign_links">

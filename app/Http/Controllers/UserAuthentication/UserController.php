@@ -19,4 +19,9 @@ class UserController extends Controller
     {
         return view('userauthentication.register');
     }
+
+    public function forgotpassword()
+    {
+        return view('userauthentication.forgotpassword');
+    }
 }
