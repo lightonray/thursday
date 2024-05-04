@@ -9,7 +9,7 @@
 		<title>Thursday - Dashboard</title>
 		
 		<!-- Favicon Icon -->
-		<link rel="icon" type="image/png" href="images/fav.png">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
 		
 		<!-- Stylesheets -->
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet'>
@@ -614,11 +614,11 @@
 			<span class="collapse_menu--label"></span>
 		</button>
 		<div class="res_main_logo">
-			<a href="index.html"><img src="images/footer_logo.svg" alt=""></a>
+			<a href="index.html"><img style="width: 120px" src="assets/img/logo/thursdaylogo.png" alt=""></a>
 		</div>
 		<div class="main_logo" id="logo">
-			<a href="index.html"><img class="logo-main" src="images/logo.svg" alt=""></a>
-			<a href="index.html"><img class="logo-inverse" src="images/dark_logo.svg" alt=""></a>
+			<a href="index.html"><img style="width: 120px" class="logo-main" src="assets/img/logo/thursdaylogo.png" alt=""></a>
+			<a href="index.html"><img style="width: 120px" class="logo-inverse" src="assets/img/logo/thursdaylogo.png" alt=""></a>
 		</div>
 		<div class="header_search">
 			<form class="search-input">				
@@ -3336,50 +3336,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer_middle">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-lg-4 col-md-6">
-							<div class="footer-content">
-								<h4 class="footer-title txt-center">Get the latest Ukiyox updates</h4>
-								<div class="footer-updates">
-									<div class="subscribe-email-group">
-										<input class="input-control" type="email" placeholder="Your e-mail">
-										<button class="subscribe-btn btn-hover" type="submit">I'm in</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer_bottom">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<ul class="footer_left">
-								<li>											
-									<div class="footer_logo">
-										<a href="index.html"><img src="images/footer_logo.svg" alt=""></a>
-									</div>
-								</li>
-								<li>
-									<p><i class="uil uil-copyright"></i> 2022 <strong>Ukiyox</strong>. All Rights Reserved.</p>
-								</li>
-							</ul>
-						</div>
-						<div class="col-md-6">
-							<ul class="footer_bottom_links">
-								<li>
-									<a href="privacy_policy.html">Privacy Policy</a>
-								</li>
-								<li>
-									<a href="terms.html">Terms</a>
-								</li>
-							</ul>
-						</div>		
-					</div>
-				</div>
 			</div>
 		</footer>
 	</div>
