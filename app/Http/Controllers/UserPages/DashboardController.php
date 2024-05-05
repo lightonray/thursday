@@ -16,4 +16,9 @@ class DashboardController extends Controller
     {
         return view('userpages.exchange');
     }
+
+    public function connectors()
+    {
+        return view('userpages.connectors');
+    }
 }

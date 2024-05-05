@@ -18,4 +18,5 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/dashboard', [UserController::class, 'dashboard'])->name('user.dashboard');
 Route::get('/exchange', [DashboardController::class, 'exchange'])->name('user.exchange');
+Route::get('/exchangeconnectors', [DashboardController::class, 'connectors'])->name('user.connectors');
 

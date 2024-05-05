@@ -679,32 +679,17 @@
             <span class="collapse_menu--label"></span>
         </button>
         <div class="res_main_logo">
-            <a href="index.html"><img style="width: 120px" src="assets/img/logo/thursdaylogo.png"
+            <a href="{{ route('user.dashboard') }}"><img style="width: 120px" src="assets/img/logo/thursdaylogo.png"
                     alt=""></a>
         </div>
         <div class="main_logo" id="logo">
-            <a href="index.html"><img style="width: 120px" class="logo-main" src="assets/img/logo/thursdaylogo.png"
+            <a href="{{ route('user.dashboard') }}"><img style="width: 120px" class="logo-main" src="assets/img/logo/thursdaylogo.png"
                     alt=""></a>
-            <a href="index.html"><img style="width: 120px" class="logo-inverse"
+            <a href="{{ route('user.dashboard') }}"><img style="width: 120px" class="logo-inverse"
                     src="assets/img/logo/thursdaylogo.png" alt=""></a>
-        </div>
-        <div class="header_search">
-            <form class="search-input">
-                <input type="text" class="header-input-control"
-                    placeholder="Search by creator, collectible or collection">
-                <span class="header-search-icon"><i class="uil uil-search icon"></i></span>
-            </form>
         </div>
         <div class="header_right ms-auto">
             <ul>
-                <li>
-                    <a href="create.html" class="btn main-btn btn-hover me-3">Create</a>
-                </li>
-                <li>
-                    <a href="#searchModel" class="header_links" data-bs-toggle="modal">
-                        <i class="uil uil-search"></i>
-                    </a>
-                </li>
                 <li class="dropdown">
                     <a href="#" class="header_links" role="button" data-bs-toggle="dropdown"
                         data-bs-auto-close="outside" aria-expanded="false">
@@ -1108,9 +1093,9 @@
                     <li class="menu--item mb-2">
                         <div style="margin-left: 5px"><span style="font-size: 14px;" class="menu--label">Bot Settings</span></div>
                             <li class="menu--item mb-2">
-                                <a href="{{ route('user.exchange') }}" class="menu--link" title="Exchange">
+                                <a href="{{ route('user.connectors') }}" class="menu--link" title="Exchange">
                                     <i class='uil uil-exchange menu--icon'></i>
-                                    <span class="menu--label">Exchange</span>
+                                    <span class="menu--label">Exchange Connectors</span>
                                 </a>
                             </li>
                             <li class="menu--item mb-2">
