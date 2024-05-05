@@ -1096,159 +1096,65 @@
         <div class="left_section menu_left" id="js-menu">
             <div class="left_section">
                 <ul>
-                    <li class="menu--item">
-                        <a href="index.html" class="menu--link active" title="Home">
+                    <!-- Dashboard Section -->
+                    <li class="menu--item mb-2 mt-2">
+                        <a href="{{ route('user.dashboard') }}" class="menu--link active" title="Dashboard">
                             <i class='uil uil-home-alt menu--icon'></i>
-                            <span class="menu--label">Home</span>
+                            <span class="menu--label">Dashboard</span>
                         </a>
                     </li>
-                    <li class="menu--item">
-                        <a href="{{ route('user.exchange') }}" class="menu--link" title="Explore">
-                            <i class='uil uil-compass menu--icon'></i>
-                            <span class="menu--label">Smart Trade Exchange</span>
-                        </a>
+            
+                    <!-- Bot Settings Section -->
+                    <li class="menu--item mb-2">
+                        <div style="margin-left: 5px"><span style="font-size: 14px;" class="menu--label">Bot Settings</span></div>
+                            <li class="menu--item mb-2">
+                                <a href="{{ route('user.exchange') }}" class="menu--link" title="Exchange">
+                                    <i class='uil uil-exchange menu--icon'></i>
+                                    <span class="menu--label">Exchange</span>
+                                </a>
+                            </li>
+                            <li class="menu--item mb-2">
+                                <a href="bot_control.html" class="menu--link" title="Bot Control">
+                                    <i class='uil uil-robot menu--icon'></i>
+                                    <span class="menu--label">Bot Control</span>
+                                </a>
+                            </li>
                     </li>
-                    <li class="menu--item">
-                        <a href="following.html" class="menu--link" title="Following">
-                            <i class='uil uil-users-alt menu--icon'></i>
-                            <span class="menu--label">Following</span>
-                        </a>
+            
+                    <!-- Strategies Section -->
+                    <li class="menu--item mb-2">
+                        <div style="margin-left: 5px"><span style="font-size: 14px;" class="menu--label">Strategies</span></div>
+                            <li class="menu--item mb-2">
+                                <a href="my_strategies.html" class="menu--link" title="My Strategies">
+                                    <i class='uil uil-chart-line menu--icon'></i>
+                                    <span class="menu--label">My Strategies</span>
+                                </a>
+                            </li>
+                            <li class="menu--item mb-2">
+                                <a href="strategies_market.html" class="menu--link" title="Strategies Market">
+                                    <i class='uil-shop menu--icon'></i>
+                                    <span class="menu--label">Strategies Market</span>
+                                </a>
+                            </li>
                     </li>
-                    <li class="menu--item">
-                        <a href="activity.html" class="menu--link" title="Activity">
-                            <i class='uil uil-list-ui-alt menu--icon'></i>
-                            <span class="menu--label">Activity</span>
-                        </a>
-                    </li>
-                    <li class="menu--item menu--item__has_sub_menu">
-                        <label class="menu--link" title="Pages">
-                            <i class='uil uil-file menu--icon'></i>
-                            <span class="menu--label">Pages</span>
-                        </label>
-                        <ul class="sub_menu">
-                            <li class="sub_menu--item">
-                                <a href="about.html" class="sub_menu--link">About</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="sign_in.html" class="sub_menu--link">Sign In</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="forgot_password.html" class="sub_menu--link">Forgot Password</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="connect_wallet.html" class="sub_menu--link">Connect Wallet</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="coming_soon.html" class="sub_menu--link">coming_soon</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="error_404.html" class="sub_menu--link">Error 404</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="messages.html" class="sub_menu--link">Messenger</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="submit_request.html" class="sub_menu--link">submit_request</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="item_view.html" class="sub_menu--link">Item View</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="live_auction_item_view.html" class="sub_menu--link">Live Auction View</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="create_single_item.html" class="sub_menu--link">Create Single Item</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="create_multiples_item.html" class="sub_menu--link">Create Multiples
-                                    Item</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="blogs.html" class="sub_menu--link">Our Blog</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="blog_detail_view.html" class="sub_menu--link">Blog Detail View</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="Career.html" class="sub_menu--link">Careers</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="job_openings.html" class="sub_menu--link">Job Openings</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="job_detail_view.html" class="sub_menu--link">Job Detail View</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="suggest_features.html" class="sub_menu--link">Suggest Features</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="suggestion_openings.html" class="sub_menu--link">Suggestion Openings</a>
-                            </li>
-                            <li class="sub_menu--item">
-                                <a href="suggestion_post_view.html" class="sub_menu--link">Suggestion Post View</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="left_section pt-2">
-                <ul>
-                    <li class="menu--item">
-                        <a href="how_it_works.html" class="menu--link" title="How it Works">
-                            <i class='uil uil-info-circle menu--icon'></i>
-                            <span class="menu--label">How it Works</span>
-                        </a>
-                    </li>
-                    <li class="menu--item">
-                        <a href="help_center.html" class="menu--link" title="Help Center">
-                            <i class='uil uil-life-ring menu--icon'></i>
-                            <span class="menu--label">Help Center</span>
-                        </a>
-                    </li>
-                    <li class="menu--item_community">
-                        <h4>Community</h4>
-                    </li>
-                    <li class="menu--item">
-                        <a href="uki_token.html" class="menu--link" title="UKI Token">
-                            <i class='uil uil-question-circle menu--icon'></i>
-                            <span class="menu--label">UKI Token</span>
-                        </a>
-                    </li>
-                    <li class="menu--item">
-                        <a href="blogs.html" class="menu--link" title="Blog">
-                            <i class='uil uil-rss menu--icon'></i>
-                            <span class="menu--label">Blog</span>
-                        </a>
-                    </li>
-                    <li class="menu--item">
-                        <a href="voting.html" class="menu--link" title="Voting">
-                            <i class='uil uil-thumbs-up menu--icon'></i>
-                            <span class="menu--label">Voting</span>
-                        </a>
-                    </li>
-                    <li class="menu--item">
-                        <a href="suggest_features.html" class="menu--link" title="Suggest feature">
-                            <i class='uil uil-asterisk menu--icon'></i>
-                            <span class="menu--label">Suggest feature</span>
-                        </a>
-                    </li>
-                    <li class="menu--item">
-                        <a href="subscribe.html" class="menu--link" title="Subscribe">
-                            <i class='uil uil-envelope-alt menu--icon'></i>
-                            <span class="menu--label">Subscribe</span>
+            
+                    <!-- Smart Trade Section -->
+                    <li class="menu--item mb-2">
+                        <div style="margin-left: 5px"><span style="font-size: 14px;" class="menu--label">Smart Trade</span></div>
+                        <a href="{{ route('user.exchange') }}" class="menu--link" title="Exchange Terminal">
+                            <i class='uil-bitcoin-circle menu--icon'></i>
+                            <span class="menu--label">Exchange Terminal</span>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="left_footer">
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="career.html">Career</a></li>
+            <div class="left_footer mt-4">
+                <ul style="margin-top: 80px" class="ms-2">
                     <li><a href="privacy_policy.html">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms</a></li>
                 </ul>
-                <div class="left_footer_content">
-                    <p><i class="uil uil-copyright"></i> 2022 <strong>Ukiyox</strong>. All Rights Reserved.</p>
+                <div class="left_footer_content ms-4">
+                    <p><i class="uil uil-copyright ms-4"></i> 2024 <strong>Thursday</strong></p>
                 </div>
             </div>
         </div>
