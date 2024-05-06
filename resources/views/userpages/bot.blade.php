@@ -31,7 +31,7 @@
                             </div>
                         </td>
                         <td style="padding: 5px;">
-                            {{-- <p class="fw-normal mb-1">{{ $bot->exchange->name }}</p> --}}
+                            <p class="fw-normal mb-1">{{ $bot->exchangeConnector->exchange_name }}</p>
                         </td>
                         <td style="padding: 5px;">
                             <p class="fw-normal mb-1">{{ $bot->symbol }}</p>

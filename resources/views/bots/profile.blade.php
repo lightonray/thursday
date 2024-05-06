@@ -15,15 +15,15 @@
                                     </div>
                                     <div class="item-btns mt-30">
                                         <button class="main-btn btn-hover h-40 w-100 mt-2 me_2" data-bs-toggle="modal"
-                                            data-bs-target="#placebidModal">Place a bid</button>
+                                            data-bs-target="#placebidModal">Start Bot</button>
                                         <button class="buy-btn h-40 w-100 mt-2 ms_2" data-bs-toggle="modal"
-                                            data-bs-target="#buyModal">Buy From <span>0.007 ETH</span></button>
+                                            data-bs-target="#buyModal">Stop Bot</button>
                                     </div>
                                 </div>
                                 <div class="col-xl-7 col-lg-12 col-md-12">
                                     <div class="item-details rrrmt-30">
                                         <div class="item-dt-top">
-                                            <h3 class="view-item-title">The Digital IV london</h3>
+                                            <h3 class="view-item-title">Bot Name: {{ $bot->name }}</h3>
                                             <div class="item-more-actions">
                                                 <div class="item-creators-options pb-0">
                                                     <span class="like-btn"><i class="uil uil-heart"></i><ins>42</ins></span>
@@ -51,12 +51,6 @@
                                                 <nav>
                                                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                                                         <li class="nav-item" role="presentation">
-                                                            <button class="nav-link active" data-bs-toggle="tab"
-                                                                data-bs-target="#owners" type="button" role="tab"
-                                                                aria-controls="owners" aria-selected="true"><i
-                                                                    class="uil uil-users me-2"></i>Owners</button>
-                                                        </li>
-                                                        <li class="nav-item" role="presentation">
                                                             <button class="nav-link" data-bs-toggle="tab"
                                                                 data-bs-target="#details" type="button" role="tab"
                                                                 aria-controls="details" aria-selected="false"><i
@@ -77,114 +71,25 @@
                                                     </ul>
                                                 </nav>
                                                 <div class="tab-content" id="nav-tabContent">
-                                                    <div class="tab-pane fade show active" id="owners" role="tabpanel">
-                                                        <div class="owners-list">
-                                                            <div class="item-bid">
-                                                                <div class="bid-item-dt">
-                                                                    <div class="bid-author-img">
-                                                                        <img src="images/left-imgs/img-2.jpg"
-                                                                            alt="">
-                                                                        <span class="verif-badge">
-                                                                            <svg width="20" height="20"
-                                                                                viewBox="0 0 12 12" fill="none"
-                                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                                <path
-                                                                                    d="M4.78117 0.743103C5.29164 -0.247701 6.70826 -0.247701 7.21872 0.743103C7.52545 1.33846 8.21742 1.62509 8.8553 1.42099C9.91685 1.08134 10.9186 2.08304 10.5789 3.1446C10.3748 3.78247 10.6614 4.47445 11.2568 4.78117C12.2476 5.29164 12.2476 6.70826 11.2568 7.21872C10.6614 7.52545 10.3748 8.21742 10.5789 8.8553C10.9186 9.91685 9.91685 10.9186 8.8553 10.5789C8.21742 10.3748 7.52545 10.6614 7.21872 11.2568C6.70826 12.2476 5.29164 12.2476 4.78117 11.2568C4.47445 10.6614 3.78247 10.3748 3.1446 10.5789C2.08304 10.9186 1.08134 9.91685 1.42099 8.8553C1.62509 8.21742 1.33846 7.52545 0.743103 7.21872C-0.247701 6.70826 -0.247701 5.29164 0.743103 4.78117C1.33846 4.47445 1.62509 3.78247 1.42099 3.1446C1.08134 2.08304 2.08304 1.08134 3.1446 1.42099C3.78247 1.62509 4.47445 1.33846 4.78117 0.743103Z"
-                                                                                    fill="#ffdb45"></path>
-                                                                                <path fill-rule="evenodd"
-                                                                                    clip-rule="evenodd"
-                                                                                    d="M8.43961 4.23998C8.64623 4.43922 8.65221 4.76823 8.45297 4.97484L5.40604 8.13462L3.54703 6.20676C3.34779 6.00014 3.35377 5.67113 3.56039 5.47189C3.76701 5.27266 4.09602 5.27864 4.29526 5.48525L5.40604 6.63718L7.70475 4.25334C7.90398 4.04672 8.23299 4.04074 8.43961 4.23998Z"
-                                                                                    fill="#111111"></path>
-                                                                            </svg>
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="bid-text-dt">
-                                                                        <div class="bid-action font-16 mb-1">
-                                                                            <a href="#" class="bid-action-item">
-                                                                                <span
-                                                                                    class="bid-action-item-text f-600">Mad
-                                                                                    Scientist</span>
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="owner-bid-dt">
-                                                                            <span>16/16 on sale for <span
-                                                                                    class="bid-range">0.001 ETH</span>
-                                                                                each</span>
-                                                                        </div>
-                                                                        <button
-                                                                            class="buy-bid-btn btn-hover mt-3">Buy</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="item-bid">
-                                                                <div class="bid-item-dt">
-                                                                    <div class="bid-author-img">
-                                                                        <img src="images/left-imgs/img-3.jpg"
-                                                                            alt="">
-                                                                    </div>
-                                                                    <div class="bid-text-dt">
-                                                                        <div class="bid-action font-16 mb-1">
-                                                                            <a href="#" class="bid-action-item">
-                                                                                <span
-                                                                                    class="bid-action-item-text f-600">Brainmood</span>
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="owner-bid-dt">
-                                                                            <span>1/1 on sale for <span
-                                                                                    class="bid-range">0.1 ETH</span>
-                                                                                each</span>
-                                                                        </div>
-                                                                        <button
-                                                                            class="buy-bid-btn btn-hover mt-3">Buy</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="item-bid">
-                                                                <div class="bid-item-dt">
-                                                                    <div class="bid-author-img">
-                                                                        <img src="images/left-imgs/img-6.jpg"
-                                                                            alt="">
-                                                                    </div>
-                                                                    <div class="bid-text-dt">
-                                                                        <div class="bid-action font-16 mb-1">
-                                                                            <a href="#" class="bid-action-item">
-                                                                                <span
-                                                                                    class="bid-action-item-text f-600">Nonfunguy</span>
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="owner-bid-dt">
-                                                                            <span>1 edition not for sale</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab-pane fade" id="details" role="tabpanel">
+                                                    <div class="tab-pane fade show active" id="details" role="tabpanel">
                                                         <div class="about-item">
                                                             <ul class="about-item-dt">
                                                                 <li>
                                                                     <div class="about-item-dt-list">
-                                                                        <h4>Rarity</h4>
-                                                                        <span>1 of 1</span>
+                                                                        <h4>Exchange Name</h4>
+                                                                        <span>{{ $bot->exchangeConnector->name }}</span>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="about-item-dt-list">
-                                                                        <h4>Animation</h4>
-                                                                        <span>Infinite</span>
+                                                                        <h4>Strategy</h4>
+                                                                        <span>{{ $bot->strategy->name }}</span>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="about-item-dt-list">
-                                                                        <h4>File Dimensions</h4>
-                                                                        <span>1080 px X 1350 px</span>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="about-item-dt-list">
-                                                                        <h4>File Size</h4>
-                                                                        <span>15.5 MB</span>
+                                                                        <h4>Exchange</h4>
+                                                                        <span>{{ $bot->exchangeConnector->exchange_name }}</span>
                                                                     </div>
                                                                 </li>
                                                             </ul>
