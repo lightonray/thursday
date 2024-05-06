@@ -14,17 +14,34 @@ class DefaultStrategySeeder extends Seeder
     public function run(): void
     {
         $defaultOptions = [
-            'buy_threshold' => 0.05, // Example: Buy when price drops by 5%
-            'sell_threshold' => 0.05, // Example: Sell when price rises by 5%
-            'stop_loss' => 0.1, // Example: Stop loss at 10%
-            'take_profit' => 0.2, // Example: Take profit at 20%
-            // Add more options as needed
+            'instrument' => 'BTC-PERPETUAL',
+            'position_type' => 'long',
+            'position_size' => 100, 
+            'entry_strategy' => [
+                'type' => 'limit',
+                'entry_price' => null,
+                'order_type' => 'market' 
+            ],
+            'exit_strategy' => [
+                'take_profit' => [
+                    'enabled' => true,
+                    'price' => 50000
+                ],
+                'stop_loss' => [
+                    'enabled' => true,
+                    'price' => 45000 
+                ]
+            ],
+            'risk_management' => [
+                'max_drawdown_percent' => 10,
+                'adjust_position_size' => true  
+            ],
+            'leverage' => 10 
         ];
 
-        // Convert options array to JSON
+
         $jsonOptions = json_encode($defaultOptions);
 
-        // Create a new strategy for BTC-PERPETUAL with default options
         Strategy::create([
             'name' => 'BTC-PERPETUAL Default Strategy',
             'options' => $jsonOptions,
@@ -32,3 +49,5 @@ class DefaultStrategySeeder extends Seeder
 
     }
 }
+
+
