@@ -1088,7 +1088,7 @@
                 <ul>
                     <!-- Dashboard Section -->
                     <li class="menu--item mb-2 mt-2">
-                        <a href="{{ route('user.dashboard') }}" class="menu--link active" title="Dashboard">
+                        <a href="{{ route('user.dashboard') }}" class="menu--link" title="Dashboard">
                             <i class='uil uil-home-alt menu--icon'></i>
                             <span class="menu--label">Dashboard</span>
                         </a>

@@ -32,6 +32,6 @@ class TradingBotController extends Controller
     {
         $bot = Bot::with(['exchangeConnector', 'strategy'])->findOrFail($botId);
 
-        return view('userpages.profile', compact('bot'));
+        return view('bots.profile', compact('bot'));
     }
 }

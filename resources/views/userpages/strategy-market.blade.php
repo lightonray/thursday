@@ -20,7 +20,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mix {{ $strategy->category }}">
                                 <div class="main-card mt-30">
                                     <a href="item_view.html" class="nft-img">
-                                        <img src="https://picsum.photos/800/1000" alt="">
+                                        <img src="{{ asset('images/btcprepstrategy.jpg') }}" alt="">
                                     </a>
                                     <div class="item-detail-group">
                                         <div class="item-creators-options">
