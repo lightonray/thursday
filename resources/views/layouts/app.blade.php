@@ -1115,7 +1115,7 @@
                     <li class="menu--item mb-2">
                         <div style="margin-left: 5px"><span style="font-size: 14px;" class="menu--label">Strategies</span></div>
                             <li class="menu--item mb-2">
-                                <a href="my_strategies.html" class="menu--link" title="My Strategies">
+                                <a href="{{ route('user.strategies') }}" class="menu--link" title="My Strategies">
                                     <i class='uil uil-chart-line menu--icon'></i>
                                     <span class="menu--label">My Strategies</span>
                                 </a>

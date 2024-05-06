@@ -23,6 +23,7 @@ Route::get('/exchange', [DashboardController::class, 'exchange'])->name('user.ex
 Route::get('/exchangeconnectors', [DashboardController::class, 'connectors'])->name('user.connectors');
 Route::get('/bots', [DashboardController::class, 'bot'])->name('user.bots');
 Route::get('/strategymarket', [DashboardController::class, 'strategyMarket'])->name('user.strategymarket');
+Route::get('/mystrategies', [DashboardController::class, 'userStrategies'])->name('user.strategies');
 
 Route::post('/exchangeconnector/store', [ExchangeConnectorController::class, 'store']);
 Route::post('/bot/store', [TradingBotController::class, 'storeBot']);

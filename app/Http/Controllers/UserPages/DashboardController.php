@@ -45,4 +45,13 @@ class DashboardController extends Controller
         $symbols = TradingSymbol::all();
         return view('userpages.strategy-market',compact('strategies','symbols'));
     }
+
+    public function userStrategies()
+    {
+        $user = auth()->user();
+        
+        $strategies = $user->strategies;
+
+        return view('userpages.user-strategies',compact('strategies'));
+    }
 }
