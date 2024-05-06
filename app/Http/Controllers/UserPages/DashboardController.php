@@ -37,4 +37,10 @@ class DashboardController extends Controller
         return view('userpages.bot', compact('bots', 'connectors', 'symbols', 'strategies'));
     }
 
+    public function strategyMarket()
+    {
+        $strategies = Strategy::all();
+        $symbols = TradingSymbol::all();
+        return view('userpages.strategy-market',compact('strategies','symbols'));
+    }
 }

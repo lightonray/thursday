@@ -1121,7 +1121,7 @@
                                 </a>
                             </li>
                             <li class="menu--item mb-2">
-                                <a href="strategies_market.html" class="menu--link" title="Strategies Market">
+                                <a href="{{ route('user.strategymarket') }}" class="menu--link" title="Strategies Market">
                                     <i class='uil-shop menu--icon'></i>
                                     <span class="menu--label">Strategies Market</span>
                                 </a>
