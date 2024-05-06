@@ -38,7 +38,7 @@
                         </td>
                         <td style="padding: 5px; vertical-align: middle;">
                             <button type="button" class="btn btn-primary btn-sm" style="margin-right: 5px;">Edit</button>
-                            <button type="button" class="btn btn-danger btn-sm" onclick="deleteBot({{ $bot->id }})">Delete</button>
+                            <button type="button" class="btn btn-danger text-white btn-sm" onclick="deleteBot({{ $bot->id }})">Delete</button>
                         </td>
                     </tr>
                     @endforeach

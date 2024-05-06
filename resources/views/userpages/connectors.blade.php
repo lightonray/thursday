@@ -36,7 +36,7 @@
                                     <button type="button" class="btn btn-primary btn-sm" style="margin-right: 5px;">
                                         Edit
                                     </button>
-                                    <button type="button" class="btn btn-danger btn-sm"
+                                    <button type="button" class="btn btn-danger text-white btn-sm"
                                         onclick="deleteConnector({{ $connector->id }})">
                                         Delete
                                     </button>

@@ -25,7 +25,7 @@
                                         <div class="item-text-dt">
                                             <a href="#" class="item-title">Owned</a>
                                             <div class="item-text-bottom">
-                                                <button type="button" class="btn btn-danger remove-strategy" data-strategy-id="{{ $strategy->id }}">Remove Strategy</button>
+                                                <button type="button" class="btn btn-danger text-white remove-strategy" data-strategy-id="{{ $strategy->id }}">Remove Strategy</button>
                                                 <span class="like-btn"><i class="uil uil-heart"></i><ins>45</ins></span>
                                             </div>
                                         </div>

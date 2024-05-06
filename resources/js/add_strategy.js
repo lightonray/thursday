@@ -7,7 +7,7 @@ $(document).ready(function() {
         };
 
         $.ajax({
-            url: '/user/add-strategy',
+            url: '/add-strategy',
             type: 'POST',
             contentType: 'application/json', 
             data: JSON.stringify(formData),
