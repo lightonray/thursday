@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserPages\UserController;
 use App\Http\Controllers\UserPages\DashboardController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Http\Controllers\ExchangeConnectors\ExchangeConnectorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,6 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/dashboard', [UserController::class, 'dashboard'])->name('user.dashboard');
 Route::get('/exchange', [DashboardController::class, 'exchange'])->name('user.exchange');
 Route::get('/exchangeconnectors', [DashboardController::class, 'connectors'])->name('user.connectors');
+
+Route::post('/exchangeconnector/store', [ExchangeConnectorController::class, 'store']);
 

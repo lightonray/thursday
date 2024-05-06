@@ -33,6 +33,11 @@
 
     <!-- project css file  -->
     <link rel="stylesheet" href="assets/css/cryptoon.style.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    @vite(['resources/sass/main.scss'])
+    @stack('css')
 </head>
 
 <body class="h-100">
@@ -1165,6 +1170,9 @@
     <!-- Jquery Page Js -->
     <script src="js/template.js"></script>
     <script src="js/page/exchange.js"></script>
+
+    @vite(['resources/js/app.js'])
+    @stack('js')
 </body>
 
 </html>
