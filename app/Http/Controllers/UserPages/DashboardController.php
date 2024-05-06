@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\UserPages;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\ExchangeConnector;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -19,6 +21,7 @@ class DashboardController extends Controller
 
     public function connectors()
     {
-        return view('userpages.connectors');
+        $connectors = ExchangeConnector::where('user_id', Auth::id())->get();
+        return view('userpages.connectors', compact('connectors'));
     }
 }
