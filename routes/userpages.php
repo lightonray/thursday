@@ -32,3 +32,8 @@ Route::post('/exchangeconnector/store', [ExchangeConnectorController::class, 'st
 Route::post('/bot/store', [TradingBotController::class, 'storeBot']);
 Route::post('/add-strategy', [UserController::class, 'addStrategy'])->name('user.add_strategy');
 
+
+
+
+Route::post('/bot/start', [TradingBotController::class, 'startBot']);
+Route::post('/bot/stop', [TradingBotController::class, 'stopBot']);

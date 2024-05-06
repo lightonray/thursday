@@ -1,5 +1,7 @@
 import './bootstrap';
 
+import './bot_logic';
+
 if(document.querySelector("#submitBtnConnector") != undefined){
     import ('./exchange_connector');
 }
