@@ -26,7 +26,7 @@
                         <td style="padding: 5px;">
                             <div class="d-flex align-items-center">
                                 <div class="ms-3">
-                                    <p class="fw-bold mb-1">{{ $bot->name }}</p>
+                                    <a href="{{ route('bot.profile', $bot->id) }}"><p class="fw-bold mb-1">{{ $bot->name }}</p></a>
                                 </div>
                             </div>
                         </td>
