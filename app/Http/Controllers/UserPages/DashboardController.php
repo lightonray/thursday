@@ -30,10 +30,12 @@ class DashboardController extends Controller
 
     public function bot()
     {
+        $user = auth()->user(); // Get the currently authenticated user
         $bots = Bot::all();
         $connectors = ExchangeConnector::all();
         $symbols = TradingSymbol::all();
-        $strategies = Strategy::all(); // Retrieve all available strategies
+        $strategies = $user->strategies; // Retrieve strategies added by the user
+
         return view('userpages.bot', compact('bots', 'connectors', 'symbols', 'strategies'));
     }
 

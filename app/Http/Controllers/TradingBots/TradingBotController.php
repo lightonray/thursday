@@ -27,4 +27,18 @@ class TradingBotController extends Controller
 
         return response()->json(['success' => true, 'message' => 'Bot created successfully.', 'data' => $bot]);
     }
+    
+
+    public function addStrategy(Request $request)
+    {
+        $user = auth()->user();
+        $strategyId = $request->input('strategy_id');
+
+        if ($user->strategies()->where('strategy_id', $strategyId)->exists()) {
+            return response()->json(['error' => 'Strategy already added'], 409);
+        }
+
+        $user->strategies()->attach($strategyId);
+        return response()->json(['success' => 'Strategy added successfully']);
+    }
 }

@@ -26,4 +26,5 @@ Route::get('/strategymarket', [DashboardController::class, 'strategyMarket'])->n
 
 Route::post('/exchangeconnector/store', [ExchangeConnectorController::class, 'store']);
 Route::post('/bot/store', [TradingBotController::class, 'storeBot']);
+Route::post('/user/add-strategy', [TradingBotController::class, 'addStrategy'])->name('user.add_strategy');
 

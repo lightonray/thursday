@@ -10,4 +10,9 @@ class Strategy extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'options'];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'user_strategies');
+    }
 }

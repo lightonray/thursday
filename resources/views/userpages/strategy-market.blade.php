@@ -33,7 +33,7 @@
                                         <div class="item-text-dt">
                                             <a href="#" class="item-title">Free</a>
                                             <div class="item-text-bottom">
-                                                <button class="btn btn-primary">Add Strategy</button>
+                                                <button type="button" class="btn btn-primary add-strategy" data-strategy-id="{{ $strategy->id }}">Add Strategy</button>
                                                 <span class="like-btn"><i class="uil uil-heart"></i><ins>45</ins></span>
                                             </div>
                                         </div>

@@ -8,3 +8,4 @@ if(document.querySelector("#botModal") != undefined){
     import ('./add_bot');
 }
 
+import './add_strategy';

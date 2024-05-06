@@ -43,4 +43,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function strategies()
+    {
+        return $this->belongsToMany(Strategy::class, 'user_strategies', 'user_id', 'strategy_id');
+    }
+    
 }

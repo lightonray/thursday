@@ -83,12 +83,17 @@
                     </div>
                     <div class="mb-3">
                         <label for="strategy" class="form-label">Strategy</label>
-                        <select class="form-select" id="strategy" name="strategy" required>
-                            <option value="">Select Strategy</option>
-                            @foreach ($strategies as $strategy)
-                            <option value="{{ $strategy->id }}">{{ $strategy->name }}</option>
-                            @endforeach
-                        </select>
+                        @if ($strategies->isEmpty())
+                            <p>Please add a strategy from the market.</p>
+                            <a href="" class="btn btn-primary">Go to Market</a>
+                        @else
+                            <select class="form-select" id="strategy" name="strategy" required>
+                                <option value="">Select Strategy</option>
+                                @foreach ($strategies as $strategy)
+                                    <option value="{{ $strategy->id }}">{{ $strategy->name }}</option>
+                                @endforeach
+                            </select>
+                        @endif
                     </div>
                 </form>
             </div>
