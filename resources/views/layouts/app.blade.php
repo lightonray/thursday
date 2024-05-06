@@ -1104,7 +1104,7 @@
                                 </a>
                             </li>
                             <li class="menu--item mb-2">
-                                <a href="bot_control.html" class="menu--link" title="Bot Control">
+                                <a href="{{ route('user.bots') }}" class="menu--link" title="Bot Control">
                                     <i class='uil uil-robot menu--icon'></i>
                                     <span class="menu--label">Bot Control</span>
                                 </a>
