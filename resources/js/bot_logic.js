@@ -33,17 +33,16 @@ $('#startBotBtn').on('click', function() {
     });
 });
 
-// Stop Bot
 $('#stopBotBtn').on('click', function() {
     var formData = new FormData();
     formData.append('bot_id', $(this).data('bot-id'));
-    formData.append('_token', $('input[name="_token"]').val()); // Same assumption as above
+    formData.append('_token', $('input[name="_token"]').val()); // Assuming you have CSRF token in a hidden input field
 
     $.ajax({
         url: '/bot/stop',
         type: 'POST',
-        processData: false,
-        contentType: false,
+        processData: false,  // Important: don't process the files
+        contentType: false,  // Important: set content type to false
         data: formData,
         success: function(response) {
             Swal.fire({

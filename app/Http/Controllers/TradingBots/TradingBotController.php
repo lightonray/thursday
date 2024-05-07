@@ -56,10 +56,6 @@ class TradingBotController extends Controller
               return response()->json(['error' => 'Strategy not found'], 404);
           }
 
-        //   $user = auth()->user();
-        //   $exchangeConnector = $user->exchangeConnector()->first();
-        //   dd($user, $exchangeConnector, $exchangeConnector->public_key, $exchangeConnector->private_key);
-
           $result = $this->deribitService->startBot($strategy, $bot->symbol);
   
           if (isset($result['error'])) {
@@ -73,24 +69,26 @@ class TradingBotController extends Controller
           return response()->json(['success' => 'Bot started successfully', 'data' => $result]);
       }
   
-      // Stop the bot
-      public function stopBot(Request $request, $botId)
+      public function stopBot(Request $request)
       {
+          $botId = $request->input('bot_id');
           $bot = Bot::findOrFail($botId);
-  
-          // Assuming we have a method to get the position ID
-          $positionId = $bot->position_id; // You'll need to manage position IDs when starting bots
-  
-          $result = $this->deribitService->stopBot($positionId);
-  
+          $strategy = Strategy::findOrFail($bot->strategy_id);
+      
+          if (!$strategy) {
+              return response()->json(['error' => 'Strategy not found'], 404);
+          }
+      
+          $result = $this->deribitService->stopBot($strategy, $bot->symbol);
+      
           if (isset($result['error'])) {
               return response()->json(['error' => $result['message']], 400);
           }
-  
-          // Update bot status to 'stopped'
+      
           $bot->status = 'stopped';
           $bot->save();
-  
+      
           return response()->json(['success' => 'Bot stopped successfully', 'data' => $result]);
       }
+      
 }
