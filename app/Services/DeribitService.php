@@ -118,5 +118,52 @@ class DeribitService
     
         return json_decode($response->getBody()->getContents(), true);
     }
+
+
+    public function getAccountSummary($currency = 'BTC')
+    {
+        $user = auth()->user();
+        $exchangeConnector = $user->exchangeConnector()->first();
+
+        // Get user's API keys
+        $apiKey = $exchangeConnector->public_key;
+        $apiSecret = $exchangeConnector->private_key;
+
+        // Prepare the request parameters
+        $params = [
+            'currency' => $currency
+        ];
+
+        // Prepare the JSON request
+        $request_json = json_encode([
+            'jsonrpc' => '2.0',
+            'id' => 5276,  // Increment or generate a unique ID
+            'method' => 'private/get_account_summary',
+            'params' => $params
+        ]);
+
+        // Generate a timestamp and nonce
+        $timestamp = round(microtime(true) * 1000);
+        $nonce = substr(str_shuffle("abcdefghijklmnopqrstuvwxyz0123456789"), 0, 8);
+
+        // Create the data to sign
+        $request_data = strtoupper('POST') . "\n/api/v2/private/get_account_summary\n" . $request_json . "\n";
+        $string_to_sign = $timestamp . "\n" . $nonce . "\n" . $request_data;
+
+        // Generate the HMAC signature
+        $signature = hash_hmac('sha256', $string_to_sign, $apiSecret);
+
+        // Send request to Deribit API to get the account summary
+        $response = $this->client->request('POST', 'private/get_account_summary', [
+            'body' => $request_json,
+            'headers' => [
+                'Content-Type' => 'application/json',
+                'Authorization' => "deri-hmac-sha256 id=$apiKey,ts=$timestamp,nonce=$nonce,sig=$signature"
+            ]
+        ]);
+
+        return json_decode($response->getBody()->getContents(), true);
+    }
+
 }
 

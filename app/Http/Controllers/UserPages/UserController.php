@@ -4,13 +4,17 @@ namespace App\Http\Controllers\UserPages;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Services\DeribitService;
 use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
-    public function __construct()
+    protected $deribitService;
+
+    public function __construct(DeribitService $deribitService)
     {   
         $this->middleware('auth');
+        $this->deribitService = $deribitService;
     }
 
     public function dashboard()
@@ -38,5 +42,20 @@ class UserController extends Controller
     
         // Pass the user data to the profile view
         return view('userpages.profile', compact('userprofile'));
+    }
+
+    public function fetchAccountSummary()
+    {
+        $deribitService = new DeribitService(auth()->user()); // Assuming you pass the authenticated user
+        $summary = $deribitService->getAccountSummary(); // Fetch account summary for 'BTC' by default
+
+        if (isset($summary['error'])) {
+            return response()->json(['error' => 'Failed to fetch account data', 'details' => $summary['error']], 400);
+        }
+
+        return response()->json([
+            'success' => true,
+            'available_withdrawal_funds' => $summary['result']['available_withdrawal_funds'] ?? 0
+        ]);
     }
 }

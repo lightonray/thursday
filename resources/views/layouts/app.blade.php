@@ -1002,10 +1002,10 @@
                             <div class="account_balance_dt_group d-flex align-items-center">
                                 <div class="balance_dt">
                                     <div class="eth_bl_title">
-                                        <span class="eth_bl_title">Balance</span>
+                                        <span class="eth_bl_title">Deribit Exchange Balance</span>
                                     </div>
                                     <div class="eth_count_dt">
-                                        <span class="eth_count">0 ETH</span>
+                                        <span id="account_balance" class="eth_count"></span>
                                     </div>
                                 </div>
                             </div>

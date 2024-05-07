@@ -2,6 +2,8 @@ import './bootstrap';
 
 import './bot_logic';
 
+import './account_balance';
+
 if(document.querySelector("#submitBtnConnector") != undefined){
     import ('./exchange_connector');
 }
