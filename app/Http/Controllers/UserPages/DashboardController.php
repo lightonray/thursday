@@ -54,4 +54,12 @@ class DashboardController extends Controller
 
         return view('userpages.user-strategies',compact('strategies'));
     }
+
+    public function showStrategyProfile($strategyId)
+    {
+        $strategy = Strategy::findOrFail($strategyId);
+        $options = json_decode($strategy->options, true);
+
+        return view('strategies.profile', compact('strategy', 'options'));
+    }
 }

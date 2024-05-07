@@ -37,7 +37,7 @@
                                     </button>
                                     <button type="button" class="btn text-white btn-danger" data-bs-toggle="modal"
                                         data-bs-target="#deleteConnectorModal" data-connector-id="{{ $connector->id }}">
-                                        Delete Exchange Connector
+                                        Delete
                                     </button>
                                 </td>
                             </tr>

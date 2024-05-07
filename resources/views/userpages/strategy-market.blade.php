@@ -26,7 +26,9 @@
                                         <div class="item-creators-options">
                                             <div class="item-creators-group">
                                                 <div>
-                                                    <h5>{{ $strategy->name }}</h5>
+                                                    <div>
+                                                        <a href="{{ route('strategy.profile', $strategy->id) }}"><p class="fw-bold mb-1"><h5 style="color:aqua">{{ $strategy->name }}</h5></p></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
