@@ -1,4 +1,25 @@
 @extends('layouts.app')
+
+@push('css')
+    <style>
+        .status-container {
+            display: inline-block;
+            border: 2px solid;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+
+        .status-running {
+            border-color: #2ecc71;
+            color: #2ecc71;
+        }
+
+        .status-stopped {
+            border-color: #e74c3c;
+            color: #e74c3c;
+        }
+    </style>
+@endpush
 @section('content')
     <div class="wrapper d-flex flex-column h-100">
         <div class="main-wrapper">
@@ -14,8 +35,9 @@
                                         </div>
                                     </div>
                                     <div class="item-btns mt-30">
-                                        <button id="startBotBtn" class="main-btn btn-hover h-40 w-100 mt-2 me_2" data-bs-toggle="modal"
-                                            data-bs-target="#placebidModal" data-bot-id="{{ $bot->id }}">Start Bot</button>
+                                        <button id="startBotBtn" class="main-btn btn-hover h-40 w-100 mt-2 me_2"
+                                            data-bs-toggle="modal" data-bs-target="#placebidModal"
+                                            data-bot-id="{{ $bot->id }}">Start Bot</button>
                                         <button id="stopBotBtn" class="buy-btn h-40 w-100 mt-2 ms_2" data-bs-toggle="modal"
                                             data-bs-target="#buyModal" data-bot-id="{{ $bot->id }}">Stop Bot</button>
                                     </div>
@@ -90,6 +112,15 @@
                                                                     <div class="about-item-dt-list">
                                                                         <h4>Exchange</h4>
                                                                         <span>{{ $bot->exchangeConnector->exchange_name }}</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div id="bot_status" class="about-item-dt-list">
+                                                                        <h4>Status</h4>
+                                                                        <div
+                                                                            class="status-container {{ $bot->status === 'running' ? 'status-running' : 'status-stopped' }}">
+                                                                            <span>{{ $bot->status }}</span>
+                                                                        </div>
                                                                     </div>
                                                                 </li>
                                                             </ul>

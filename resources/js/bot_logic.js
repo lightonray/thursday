@@ -1,15 +1,20 @@
 $('#startBotBtn').on('click', function() {
+    var $btn = $(this); // Cache the button
     var formData = new FormData();
-    formData.append('bot_id', $(this).data('bot-id'));
-    formData.append('_token', $('input[name="_token"]').val()); // Assuming you have CSRF token in a hidden input field
+    formData.append('bot_id', $btn.data('bot-id'));
+    formData.append('_token', $('input[name="_token"]').val());
 
     $.ajax({
         url: '/bot/start',
         type: 'POST',
-        processData: false,  // Important: don't process the files
-        contentType: false,  // Important: set content type to false
+        processData: false,
+        contentType: false,
         data: formData,
         success: function(response) {
+            // Update UI
+            $('#bot_status span').text('running').closest('.status-container')
+                .removeClass('status-stopped').addClass('status-running');
+            
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
@@ -34,17 +39,22 @@ $('#startBotBtn').on('click', function() {
 });
 
 $('#stopBotBtn').on('click', function() {
+    var $btn = $(this); // Cache the button
     var formData = new FormData();
-    formData.append('bot_id', $(this).data('bot-id'));
-    formData.append('_token', $('input[name="_token"]').val()); // Assuming you have CSRF token in a hidden input field
+    formData.append('bot_id', $btn.data('bot-id'));
+    formData.append('_token', $('input[name="_token"]').val());
 
     $.ajax({
         url: '/bot/stop',
         type: 'POST',
-        processData: false,  // Important: don't process the files
-        contentType: false,  // Important: set content type to false
+        processData: false,
+        contentType: false,
         data: formData,
         success: function(response) {
+            // Update UI
+            $('#bot_status span').text('stopped').closest('.status-container')
+                .removeClass('status-running').addClass('status-stopped');
+            
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
