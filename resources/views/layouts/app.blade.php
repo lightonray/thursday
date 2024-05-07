@@ -986,13 +986,13 @@
                 <li class="dropdown">
                     <a href="#" class="header-account" role="button" data-bs-toggle="dropdown"
                         data-bs-auto-close="outside" aria-expanded="false">
-                        <span>0 <ins>UKI</ins></span>
-                        <img src="images/left-imgs/img-10.jpg" alt="avatar">
+                        <span>{{ auth()->user()->name }}</span>
+                        <img src="{{ asset('images/bot.png') }}" alt="avatar">
                     </a>
                     <div class="dropdown-menu dropdown-menu-account dropdown-menu-end">
                         <div class="account_name">
                             <div class="name_dt">
-                                <h4>Joginder Singh</h4>
+                                <h4>{{ auth()->user()->name }}</h4>
                                 <button class="copy_btn"><i class="uil uil-copy"></i></button>
                             </div>
                             <a href="#" class="set_name"><i class="uil uil-edit-alt me-2"></i>Set Display
@@ -1000,63 +1000,19 @@
                         </div>
                         <div class="account_balance_dt">
                             <div class="account_balance_dt_group d-flex align-items-center">
-                                <div class="acount_balance_eth_dt">
-                                    <div class="eth_circle">
-                                        <svg viewBox="0 0 16 16" fill="none" width="20" height="20">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M3.625 8L8 10.625L12.375 8L8 1L3.625 8ZM3.625 8.875L8 11.5L12.375 8.875L8 15L3.625 8.875Z"
-                                                fill="#fff"></path>
-                                        </svg>
-                                    </div>
-                                </div>
                                 <div class="balance_dt">
                                     <div class="eth_bl_title">
                                         <span class="eth_bl_title">Balance</span>
                                     </div>
                                     <div class="eth_count_dt">
                                         <span class="eth_count">0 ETH</span>
-                                        <span class="eth_count_right ms-1">0</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="account_balance_dt_group d-flex align-items-center mt-3">
-                                <div class="acount_balance_eth_dt">
-                                    <div class="weth_circle">
-                                        <svg viewBox="0 0 16 16" fill="none" width="20" height="20">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M3.625 8L8 10.625L12.375 8L8 1L3.625 8ZM3.625 8.875L8 11.5L12.375 8.875L8 15L3.625 8.875Z"
-                                                fill="#fff"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="balance_dt">
-                                    <div class="eth_bl_title">
-                                        <span class="eth_bl_title">Bidding Balance</span>
-                                    </div>
-                                    <div class="eth_count_dt">
-                                        <span class="eth_count">0 wETH</span>
-                                        <span class="eth_count_right ms-1">0</span>
-                                    </div>
-                                </div>
-                                <button class="btn convert-btn btn-hover" data-bs-toggle="modal"
-                                    data-bs-target="#convertModal"><i class="uil uil-exchange"></i></button>
-                            </div>
-                            <div class="btn_groups">
-                                <a class="btn main-btn btn-hover w-100" role="button" href="#addfundModalToggle1"
-                                    data-bs-toggle="modal">Add Funds with Cards</a>
                             </div>
                         </div>
                         <ul>
-                            <li><a class="dropdown-item" href="create.html">Create</a></li>
-                            <li><a class="dropdown-item" href="my_profile_detail_view_created.html">My Items</a></li>
                             <li><a class="dropdown-item" href="#editprofileModal" data-bs-toggle="modal"
                                     role="button">Edit Profile</a></li>
-                            <li>
-                                <div class="form-check form-switch">
-                                    <label class="form-check-label" for="autoplay">Autoplay</label>
-                                    <input class="form-check-input" type="checkbox" id="autoplay" checked>
-                                </div>
-                            </li>
                             <li>
                                 <div class="form-check form-switch">
                                     <label class="form-check-label" for="darkSwitch">Dark Mode</label>
