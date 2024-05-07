@@ -29,4 +29,9 @@ class UserController extends Controller
         $user->strategies()->attach($strategyId);
         return response()->json(['success' => 'Strategy added successfully']);
     }
+
+    public function viewProfile()
+    {
+        return view('userpages.profile');
+    }
 }

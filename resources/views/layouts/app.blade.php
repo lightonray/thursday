@@ -1011,7 +1011,7 @@
                             </div>
                         </div>
                         <ul>
-                            <li><a class="dropdown-item" href="#editprofileModal" data-bs-toggle="modal"
+                            <li><a href="{{ route('user.profile') }}" class="dropdown-item" 
                                     role="button">Edit Profile</a></li>
                             <li>
                                 <div class="form-check form-switch">

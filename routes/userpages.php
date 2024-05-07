@@ -26,7 +26,7 @@ Route::get('/strategymarket', [DashboardController::class, 'strategyMarket'])->n
 Route::get('/mystrategies', [DashboardController::class, 'userStrategies'])->name('user.strategies');
 
 Route::get('/profile{bot}', [TradingBotController::class, 'showBotProfile'])->name('bot.profile');
-
+Route::get('/userprofile', [UserController::class, 'viewProfile'])->name('user.profile');
 
 Route::post('/exchangeconnector/store', [ExchangeConnectorController::class, 'store']);
 Route::post('/bot/store', [TradingBotController::class, 'storeBot']);
