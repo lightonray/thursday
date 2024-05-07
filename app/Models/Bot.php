@@ -25,4 +25,9 @@ class Bot extends Model
     {
         return $this->belongsTo(Strategy::class);
     }
+
+    public function bots()
+    {
+        return $this->hasMany(Bot::class);
+    }
 }

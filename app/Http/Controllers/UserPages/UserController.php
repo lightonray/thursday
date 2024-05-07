@@ -20,7 +20,9 @@ class UserController extends Controller
 
     public function dashboard()
     {
-        return view('userpages.dashboard');
+        $user = auth()->user();
+        $totalBots = $user->bots()->count(); // Get the count of bots related to the user
+        return view('userpages.dashboard', compact('user', 'totalBots'));
     }
 
     public function addStrategy(Request $request)
