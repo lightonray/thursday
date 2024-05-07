@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Auth;
 
 class ExchangeConnectorController extends Controller
 {
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function store(Request $request) {
         $request->validate([
             'name' => 'required',
@@ -28,6 +34,12 @@ class ExchangeConnectorController extends Controller
         return response()->json(['success' => true, 'data' => $connector]);
     }
 
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function delete($id)
     {
         $connector = ExchangeConnector::with('bots')->find($id);
@@ -35,12 +47,10 @@ class ExchangeConnectorController extends Controller
             return redirect()->back()->with('error', 'Connector not found');
         }
 
-        // Delete all associated bots first
         foreach ($connector->bots as $bot) {
-            $bot->delete();  // Or handle any cleanup necessary before deletion
+            $bot->delete();
         }
 
-        // Now delete the exchange connector
         $connector->delete();
         return redirect()->route('user.connectors')->with('success', 'Connector and all associated bots deleted successfully');
     }

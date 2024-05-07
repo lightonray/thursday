@@ -12,13 +12,21 @@ use App\Providers\RouteServiceProvider;
 class UserController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display the login form.
+     *
+     * @return \Illuminate\Contracts\View\View
      */
     public function login()
     {
         return view('userauthentication.login');
     }
     
+    /**
+     * Authenticate the user.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
@@ -41,15 +49,25 @@ class UserController extends Controller
             // }
         }
 
-        // If authentication is not successful, just display a generic error message.
         return back()->withErrors(['login_error' => 'Invalid credentials.']);
     }
 
+    /**
+     * Display the registration form.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
     public function register()
     {
         return view('userauthentication.register');
     }
 
+     /**
+     * Store a newly created user in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function store(Request $request)
     {
         $customMessages = [
@@ -90,6 +108,12 @@ class UserController extends Controller
 
 
 
+    /**
+     * Log the user out of the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function logout(Request $request)
     {
         Auth::logout();
@@ -102,6 +126,11 @@ class UserController extends Controller
     }
 
 
+    /**
+     * Display the forgot password form.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
     public function forgotpassword()
     {
         return view('userauthentication.forgotpassword');

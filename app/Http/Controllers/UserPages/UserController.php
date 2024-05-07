@@ -10,21 +10,43 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
+     /**
+     * The Deribit service instance.
+     *
+     * @var \App\Services\DeribitService
+     */
     protected $deribitService;
 
+    /**
+     * Create a new controller instance.
+     *
+     * @param  \App\Services\DeribitService  $deribitService
+     * @return void
+     */
     public function __construct(DeribitService $deribitService)
     {   
         $this->middleware('auth');
         $this->deribitService = $deribitService;
     }
 
+    /**
+     * Display the user dashboard.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
     public function dashboard()
     {
         $user = auth()->user();
-        $totalBots = $user->bots()->count(); // Get the count of bots related to the user
+        $totalBots = $user->bots()->count();
         return view('userpages.dashboard', compact('user', 'totalBots'));
     }
 
+    /**
+     * Add a strategy to the user's list of strategies.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function addStrategy(Request $request)
     {
         $user = auth()->user();
@@ -38,19 +60,28 @@ class UserController extends Controller
         return response()->json(['success' => 'Strategy added successfully']);
     }
 
+    /**
+     * View the user's profile.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
     public function viewProfile()
     {
         $user = auth()->user();
         $userprofile = User::with('profile')->findOrFail($user->id);
     
-        // Pass the user data to the profile view
         return view('userpages.profile', compact('userprofile'));
     }
 
+    /**
+     * Fetch the account summary of the user from Deribit.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function fetchAccountSummary()
     {
-        $deribitService = new DeribitService(auth()->user()); // Assuming you pass the authenticated user
-        $summary = $deribitService->getAccountSummary(); // Fetch account summary for 'BTC' by default
+        $deribitService = new DeribitService(auth()->user());
+        $summary = $deribitService->getAccountSummary();
 
         if (isset($summary['error'])) {
             return response()->json(['error' => 'Failed to fetch account data', 'details' => $summary['error']], 400);
@@ -63,18 +94,20 @@ class UserController extends Controller
     }
 
 
+     /**
+     * Remove a strategy from the user's list of strategies.
+     *
+     * @param  int  $strategyId
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function removeStrategy($strategyId)
     {
-        // Find the user by ID
         $user = auth()->user();
 
-        // Find the strategy by ID
         $strategy = Strategy::findOrFail($strategyId);
 
-        // Detach the strategy from the user
         $user->strategies()->detach($strategy);
 
-        // Redirect back or return a response as needed
         return redirect()->back()->with('success', 'Strategy removed from user successfully');
     }
 }
