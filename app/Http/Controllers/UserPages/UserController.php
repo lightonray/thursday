@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\UserPages;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
@@ -32,6 +33,10 @@ class UserController extends Controller
 
     public function viewProfile()
     {
-        return view('userpages.profile');
+        $user = auth()->user();
+        $userprofile = User::with('profile')->findOrFail($user->id);
+    
+        // Pass the user data to the profile view
+        return view('userpages.profile', compact('userprofile'));
     }
 }

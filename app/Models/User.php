@@ -54,4 +54,8 @@ class User extends Authenticatable
         return $this->belongsToMany(Strategy::class, 'user_strategies', 'user_id', 'strategy_id');
     }
     
+    public function profile()
+    {
+        return $this->hasOne(UserProfile::class);
+    }
 }

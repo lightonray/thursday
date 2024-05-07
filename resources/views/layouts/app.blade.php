@@ -987,7 +987,7 @@
                     <a href="#" class="header-account" role="button" data-bs-toggle="dropdown"
                         data-bs-auto-close="outside" aria-expanded="false">
                         <span>{{ auth()->user()->name }}</span>
-                        <img src="{{ asset('images/bot.png') }}" alt="avatar">
+                        <img src="{{ asset('images/profilepic.jpg') }}" alt="avatar">
                     </a>
                     <div class="dropdown-menu dropdown-menu-account dropdown-menu-end">
                         <div class="account_name">
@@ -1012,7 +1012,7 @@
                         </div>
                         <ul>
                             <li><a href="{{ route('user.profile') }}" class="dropdown-item" 
-                                    role="button">Edit Profile</a></li>
+                                    role="button">View Profile</a></li>
                             <li>
                                 <div class="form-check form-switch">
                                     <label class="form-check-label" for="darkSwitch">Dark Mode</label>
