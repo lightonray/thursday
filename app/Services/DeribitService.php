@@ -21,30 +21,50 @@ class DeribitService
         ]);
     }
 
-    public function startBot($strategy, $symbol)
+    public function startBot(Strategy $strategy, $symbol)
     {
         $options = json_decode($strategy->options, true);
         
         $user = auth()->user();
         $exchangeConnector = $user->exchangeConnector()->first();
+
         // Get user's API keys
         $apiKey = $exchangeConnector->public_key;
         $apiSecret = $exchangeConnector->private_key;
-        dd($apiKey,$apiSecret);
+
         $params = [
             'instrument_name' => $symbol,
             'amount' => $options['position_size'],
             'type' => $options['entry_strategy']['order_type'],
-            'price' => $options['entry_strategy']['entry_price'] ?? null
+            'price' => $options['entry_strategy']['entry_price'] ?? null,
+            'label' => 'market0000234'
         ];
 
-        $action = $options['position_type'] === 'long' ? 'buy' : 'sell';
+        // Prepare the request
+        $request_json = json_encode([
+            'jsonrpc' => '2.0',
+            'id' => 5275,
+            'method' => 'private/' . ($options['position_type'] === 'long' ? 'buy' : 'sell'),
+            'params' => $params
+        ]);
+
+        // Generate a timestamp and nonce
+        $timestamp = round(microtime(true) * 1000);
+        $nonce = substr(str_shuffle("abcdefghijklmnopqrstuvwxyz0123456789"), 0, 8);
+
+        // Create the data to sign
+        $request_data = strtoupper('POST') . "\n/api/v2/private/" . ($options['position_type'] === 'long' ? 'buy' : 'sell') . "\n" . $request_json . "\n";
+        $string_to_sign = $timestamp . "\n" . $nonce . "\n" . $request_data;
+
+        // Generate the HMAC signature
+        $signature = hash_hmac('sha256', $string_to_sign, $apiSecret);
 
         // Send request to Deribit API to open a position
-        $response = $this->client->request('POST', "private/$action", [
-            'json' => $params,
+        $response = $this->client->request('POST', "private/" . ($options['position_type'] === 'long' ? 'buy' : 'sell'), [
+            'body' => $request_json,
             'headers' => [
-                'Authorization' => "Bearer {$apiKey}"
+                'Content-Type' => 'application/json',
+                'Authorization' => "deri-hmac-sha256 id=$apiKey,ts=$timestamp,nonce=$nonce,sig=$signature"
             ]
         ]);
 
