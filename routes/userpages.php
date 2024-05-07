@@ -32,7 +32,9 @@ Route::post('/exchangeconnector/store', [ExchangeConnectorController::class, 'st
 Route::post('/exchange-connector/delete/{id}', [ExchangeConnectorController::class, 'delete'])->name('connector.delete');
 
 Route::post('/bot/store', [TradingBotController::class, 'storeBot']);
+
 Route::post('/add-strategy', [UserController::class, 'addStrategy'])->name('user.add_strategy');
+Route::post('/userstrategy/delete/{id}', [UserController::class, 'removeStrategy'])->name('user.remove_strategy');
 
 Route::get('/account-summary', [UserController::class, 'fetchAccountSummary'])->name('account.summary');
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\UserPages;
 
 use App\Models\User;
+use App\Models\Strategy;
 use Illuminate\Http\Request;
 use App\Services\DeribitService;
 use App\Http\Controllers\Controller;
@@ -57,5 +58,21 @@ class UserController extends Controller
             'success' => true,
             'available_withdrawal_funds' => $summary['result']['available_withdrawal_funds'] ?? 0
         ]);
+    }
+
+
+    public function removeStrategy($strategyId)
+    {
+        // Find the user by ID
+        $user = auth()->user();
+
+        // Find the strategy by ID
+        $strategy = Strategy::findOrFail($strategyId);
+
+        // Detach the strategy from the user
+        $user->strategies()->detach($strategy);
+
+        // Redirect back or return a response as needed
+        return redirect()->back()->with('success', 'Strategy removed from user successfully');
     }
 }
