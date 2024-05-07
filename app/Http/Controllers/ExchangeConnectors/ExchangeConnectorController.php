@@ -27,4 +27,21 @@ class ExchangeConnectorController extends Controller
     
         return response()->json(['success' => true, 'data' => $connector]);
     }
+
+    public function delete($id)
+    {
+        $connector = ExchangeConnector::with('bots')->find($id);
+        if (!$connector) {
+            return redirect()->back()->with('error', 'Connector not found');
+        }
+
+        // Delete all associated bots first
+        foreach ($connector->bots as $bot) {
+            $bot->delete();  // Or handle any cleanup necessary before deletion
+        }
+
+        // Now delete the exchange connector
+        $connector->delete();
+        return redirect()->route('user.connectors')->with('success', 'Connector and all associated bots deleted successfully');
+    }
 }

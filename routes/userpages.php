@@ -29,6 +29,8 @@ Route::get('/profile{bot}', [TradingBotController::class, 'showBotProfile'])->na
 Route::get('/userprofile', [UserController::class, 'viewProfile'])->name('user.profile');
 
 Route::post('/exchangeconnector/store', [ExchangeConnectorController::class, 'store']);
+Route::post('/exchange-connector/delete/{id}', [ExchangeConnectorController::class, 'delete'])->name('connector.delete');
+
 Route::post('/bot/store', [TradingBotController::class, 'storeBot']);
 Route::post('/add-strategy', [UserController::class, 'addStrategy'])->name('user.add_strategy');
 

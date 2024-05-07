@@ -31,4 +31,9 @@ class ExchangeConnector extends Model
     {
         $this->attributes['private_key'] = Crypt::encryptString($value);
     }
+
+    public function bots()
+    {
+        return $this->hasMany(Bot::class, 'exchange_connector_id');
+    }
 }
