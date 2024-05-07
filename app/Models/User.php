@@ -44,6 +44,11 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    public function exchangeConnector()
+    {
+        return $this->hasOne(ExchangeConnector::class);
+    }
+    
     public function strategies()
     {
         return $this->belongsToMany(Strategy::class, 'user_strategies', 'user_id', 'strategy_id');

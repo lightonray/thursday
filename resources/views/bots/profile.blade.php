@@ -15,9 +15,9 @@
                                     </div>
                                     <div class="item-btns mt-30">
                                         <button id="startBotBtn" class="main-btn btn-hover h-40 w-100 mt-2 me_2" data-bs-toggle="modal"
-                                            data-bs-target="#placebidModal" data-bot-id="1">Start Bot</button>
+                                            data-bs-target="#placebidModal" data-bot-id="{{ $bot->id }}">Start Bot</button>
                                         <button id="stopBotBtn" class="buy-btn h-40 w-100 mt-2 ms_2" data-bs-toggle="modal"
-                                            data-bs-target="#buyModal" data-bot-id="1">Stop Bot</button>
+                                            data-bs-target="#buyModal" data-bot-id="{{ $bot->id }}">Stop Bot</button>
                                     </div>
                                 </div>
                                 <div class="col-xl-7 col-lg-12 col-md-12">

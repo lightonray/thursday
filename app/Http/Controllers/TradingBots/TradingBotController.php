@@ -46,16 +46,20 @@ class TradingBotController extends Controller
 
 
       // Start the bot
-      public function startBot(Request $request, $botId)
-      {
-          $bot = Bot::findOrFail($botId);
-          $strategy = Strategy::findOrFail($bot->strategy_id);
-  
+      public function startBot(Request $request)
+      {     
+          $botId = $request->input('bot_id'); 
+          $bot = Bot::find($botId);
+          $strategy = Strategy::findOrFail($bot->strategy_id);  
+
           if (!$strategy) {
               return response()->json(['error' => 'Strategy not found'], 404);
           }
-  
-          // Call the DeribitService to start the bot
+
+          $user = auth()->user();
+          $exchangeConnector = $user->exchangeConnector()->first();
+          dd($user, $exchangeConnector, $exchangeConnector->public_key, $exchangeConnector->private_key);
+
           $result = $this->deribitService->startBot($strategy, $bot->symbol);
   
           if (isset($result['error'])) {

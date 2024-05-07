@@ -14,7 +14,7 @@ class ExchangeConnector extends Model
 
     public function getPublicKeyAttribute($value)
     {
-        return Crypt::decryptString($value);
+        return $value ? Crypt::decryptString($value) : null;
     }
 
     public function setPublicKeyAttribute($value)
@@ -24,7 +24,7 @@ class ExchangeConnector extends Model
 
     public function getPrivateKeyAttribute($value)
     {
-        return Crypt::decryptString($value);
+        return $value ? Crypt::decryptString($value) : null;
     }
 
     public function setPrivateKeyAttribute($value)

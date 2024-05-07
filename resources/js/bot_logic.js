@@ -1,6 +1,3 @@
-// Setting CSRF token globally might not be necessary if you include the token in the FormData object
-
-// Start Bot
 $('#startBotBtn').on('click', function() {
     var formData = new FormData();
     formData.append('bot_id', $(this).data('bot-id'));
