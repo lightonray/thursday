@@ -4,17 +4,16 @@ namespace App\Services;
 
 use GuzzleHttp\Client;
 use App\Models\User;
-use App\Models\ExchangeConnector;
 use App\Models\Strategy;
 
 class DeribitService
 {
     protected $client;
-    protected $exchangeConnector;
+    protected $user;
 
-    public function __construct(ExchangeConnector $exchangeConnector)
+    public function __construct(User $user)
     {
-        $this->exchangeConnector = $exchangeConnector;
+        $this->user = $user;
         $this->client = new Client([
             'base_uri' => 'https://test.deribit.com/api/v2/',
             'timeout'  => 2.0,
@@ -26,8 +25,11 @@ class DeribitService
     {
         $options = json_decode($strategy->options, true);
         
-        $apiKey = $this->exchangeConnector->publicKey; 
-        $apiSecret = $this->exchangeConnector->privateKey;
+        $user = auth()->user();
+        $exchangeConnector = $user->exchangeConnector()->first();
+        // Get user's API keys
+        $apiKey = $exchangeConnector->public_key;
+        $apiSecret = $exchangeConnector->private_key;
         dd($apiKey,$apiSecret);
         $params = [
             'instrument_name' => $symbol,

@@ -56,9 +56,9 @@ class TradingBotController extends Controller
               return response()->json(['error' => 'Strategy not found'], 404);
           }
 
-          $user = auth()->user();
-          $exchangeConnector = $user->exchangeConnector()->first();
-          dd($user, $exchangeConnector, $exchangeConnector->public_key, $exchangeConnector->private_key);
+        //   $user = auth()->user();
+        //   $exchangeConnector = $user->exchangeConnector()->first();
+        //   dd($user, $exchangeConnector, $exchangeConnector->public_key, $exchangeConnector->private_key);
 
           $result = $this->deribitService->startBot($strategy, $bot->symbol);
   
