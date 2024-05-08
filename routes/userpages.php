@@ -30,7 +30,7 @@ Route::get('/profile{bot}', [TradingBotController::class, 'showBotProfile'])->na
 Route::post('/bot/store', [TradingBotController::class, 'storeBot']);
 
 // Strategy Routes
-Route::get('/profile{strategy}', [DashboardController::class, 'showStrategyProfile'])->name('strategy.profile');
+Route::get('/strategyprofile{strategy}', [DashboardController::class, 'showStrategyProfile'])->name('strategy.profile');
 Route::get('/strategymarket', [DashboardController::class, 'strategyMarket'])->name('user.strategymarket');
 Route::get('/mystrategies', [DashboardController::class, 'userStrategies'])->name('user.strategies');
 Route::post('/add-strategy', [UserController::class, 'addStrategy'])->name('user.add_strategy');

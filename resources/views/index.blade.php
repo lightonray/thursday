@@ -116,9 +116,9 @@
                     <button><i class="far fa-window-close"></i></button>
                 </div>
                 <div class="logo-side mb-30">
-                    <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                    <a href=""><img src="assets/img/logo/thursdaylogo.png" alt="Logo"></a>
                 </div>
-                <div class="side-info mb-30">
+                {{-- <div class="side-info mb-30">
                     <div class="contact-list mb-30">
                         <h4>Office Address</h4>
                         <p>123/A, Miranda City Likaoli <br> Prikano, Dope</p>
@@ -133,7 +133,7 @@
                         <p>info@example.com</p>
                         <p>example.mail@hum.com</p>
                     </div>
-                </div>
+                </div> --}}
                 <div class="social-icon-right mt-30">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
